@@ -154,4 +154,7 @@ function isBoardFull(board) {
   return board.every(row => row.every(cell => cell !== null));
 }
 
-console.log(`WebSocket server running on ws://0.0.0.0:${port}`);
+const PORT = process.env.PORT || 10000;
+server.listen(PORT, () => {
+  console.log(`WebSocket server running on ws://0.0.0.0:${PORT}`);
+});
